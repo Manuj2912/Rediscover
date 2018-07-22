@@ -1,0 +1,89 @@
+<html>
+<head>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        nav{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:80px;
+            box-sizing:border-box;
+            transition:.3s;
+            
+        }
+        nav.black{
+        background:#151719; 
+        }
+        nav.logo{
+            height:80%;
+            transition:.3s;
+            float:left;
+            padding-top:16px;
+            }
+        nav ul{
+            list-style: none;
+            float:right;
+            margin:0;
+            padding:0;
+            display:flex;
+            margin-top:-52px;
+        }
+        nav ul li a{
+            line-height: 60px;
+            text-decoration: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            transition:.3s;
+        }
+        nav.black ul li a{
+            color:white;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-3.2.1.js">
+    
+    </script>
+    <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }else{
+                $('nav').removeClass('black');
+            }
+        })
+
+    </script>
+    </head>
+<body style="height:105%;">
+    <div>
+    <img src="etsa.jpg" style="width:100%;height:320px;" />
+    </div>
+   <div class="wrapper">
+    <nav>
+        <div class="logo"style="width:76px;"><img src="etsalogo.jpg" style="height:60%;width:100%"/></div>
+        <ul>
+        <li><a href="parallax.html">HOME</a></li>
+            <li><a href="Status.jsp">STATUS</a></li>
+            <li><a href="register.jsp">REGISTER</a></li>
+            <li><a href="http://www.bvucoepune.edu.in/">CONTACT</a></li>
+        </ul>   
+       </nav>
+       </div>
+    <div style="float:right;width:1000px;border:1px solid black;text-align: center;margin-top: 20px;"><font color="blue"><i>Electronics and Telecommunication Engineering. It is more like a BE ECE degree with little more importance to communication. You learn micro<br><br> electronics, communication principles, basic circuit analysis, electrical engineering, semi conductors, signals and image processing, hardware,<br><br> etc….Telecommunications engineering is an engineering discipline centered on electrical and computer engineering which seeks to support and enhance <br><br>telecommunication systems. The work ranges from basic circuit design to strategic mass developments. A telecommunication engineer is responsible for <br><br>designing and overseeing the installation of telecommunications equipment and facilities, such as complex electronic switching systems, and other plain old <br><br>telephone service facilities, optical fiber cabling, IP networks, and microwave transmission systems. Telecommunication engineering also overlaps with<br><br> broadcast engineering.</i></font>
+</div>
+    <div class="signin"style="height:200px;width:200px;margin-left:30px;margin-top:50px;">
+        <form action="dashboard.jsp" method="post">
+        <input type="text" name="PRN" placeholder="PRN NO" style="height:30px;width:200px;"/><br><br>
+            <input type="password" name="Password" placeholder="PASSWORD"style="height:30px;width:200px;"/><br><br>
+            <button  name="LOGIN" value="SIGNIN" style="height:30px;width:70px;">SIGN IN</button>
+     </form>
+    <form action="logout.jsp" method="post">
+<button style="height:30px;width:80px;float:right;margin-top:-44.5px;">LOG OUT</button>        
+        </form>
+  </div>
+    
+</body>
+</html>
